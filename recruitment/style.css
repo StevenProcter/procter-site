@@ -1,0 +1,163 @@
+/* ========== RESET & BASE STYLES ========== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #fdfdfd;
+  color: #222;
+  height: 100%;
+  overflow-x: hidden;   /* prevents horizontal scroll */
+  position: relative;
+}
+
+/* ========== SLIDES ========== */
+.slide {
+  display: none;
+  height: 100vh;          /* each slide matches screen height */
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  overflow-y: auto;       /* allows scroll if text overflows */
+
+  /* animation setup */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 10;
+}
+
+.slide.exit-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide.exit-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* Adjust padding on mobile */
+@media (max-width: 768px) {
+  .slide {
+    padding: 1rem;
+  }
+}
+
+/* ========== IMAGES ========== */
+.slide-img {
+  max-width: 90%;        /* scale for narrow screens */
+  max-height: 40vh;      /* image never takes more than 40% of screen */
+  height: auto;
+  margin: 0.5rem auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ========== DESKTOP NAV BAR ========== */
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+  z-index: 1000;
+}
+
+/* Hide nav bar on mobile */
+@media (max-width: 768px) {
+  .nav {
+    display: none !important;
+  }
+}
+
+/* ========== MOBILE FLOATING ARROWS ========== */
+.nav-arrows {
+  display: none; /* hidden on desktop */
+}
+
+@media (max-width: 768px) {
+  .nav-arrows {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 1rem;       /* push to top */
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    pointer-events: none; /* only arrows clickable */
+    padding: 0 0.5rem;   /* small side padding */
+  }
+
+  .nav-arrows .arrow {
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 2rem;
+    padding: 1rem;  /* keeps tap area big */
+    cursor: pointer;
+  }
+
+  .nav-arrows .arrow:hover {
+    color: #0056b3;
+  }
+}
+
+/* ========== BUTTONS (DESKTOP NAV) ========== */
+button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.0s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ========== PROGRESS INDICATOR ========== */
+#progress {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ========== REQUIREMENTS LIST ========== */
+.requirements {
+  display: inline-block;
+  text-align: left;
+  margin: 1rem auto;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* === Responsive Google Form Embed === */
+.slide iframe {
+  width: 100%;
+  max-width: 800px;   /* Prevents it from stretching too wide */
+  height: 80vh;       /* Take 80% of the viewport height */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+

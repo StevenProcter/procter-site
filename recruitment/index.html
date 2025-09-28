@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruitment Session</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="slide active">
+    <h1>AFS Recruitment Session</h1>
+    <img src="images/companylogo.jpg" alt="Company Logo" class="slide-img">
+    <p>Please use this as a tool to help with today’s session.</p>
+    <p>Any questions throughout, please feel free to ask!</p>
+  </div>
+
+  <div class="slide">
+    <h1 style="color: darkred; font-size: 2.5rem; font-weight: bold;">IMPORTANT</h1>
+    <img src="images/checklist.jpg" alt="Checklist" class="slide-img">
+
+    <ul class="requirements">
+      <li>Must have held your driving license for longer than 12 months</li>
+      <li>Cannot have more than 6 penalty points, or IN/DR codes</li>
+      <li>Must be over 23</li>
+      <li>Must be able to pass a background check</li>
+      <li>Must be able to commit to at least 1 weekend day</li>
+    </ul>
+
+    <p>If you cannot meet any of the above requirements, please let us know before continuing with the session.</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/companylogo.jpg" alt="Company Logo" class="slide-img">
+    <h1>About AFS</h1>
+    <p>AFS are a giant in the logistics industry, with close to 300 drivers across more than 30 depots!</p>
+    <p>When we were founded in 2016, our goal was to improve the quality of deliveries and the overall driver experience. This remains our priority today, and we achieve it by using advanced technology, data, and enhanced safety measures. AFS Delivery is proud to set the industry standard.</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/payment.jpg" alt="Payment" class="slide-img">
+    <h1>Pay Rate & Van Costs</h1>
+    <ul>
+      <li>Pay: £153.50 + VAT (£184.20) per route</li>
+      <li>Van cost: £190 + VAT per week (VAT can be claimed back if VAT registered)</li>
+      <li>You are paid £1.80 per day by Amazon for using your phone</li>
+      <li>Amazon covers all fuel used on your route, from depot to depot</li>
+      <li>You will be paid weekly every Friday (invoices sent on Monday)</li>
+      <li>Bonuses will be covered on the next page</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <img src="images/payment.jpg" alt="Bonuses" class="slide-img">
+    <h1>Bonuses</h1>
+    <h2>AFS Bonus</h2>
+    <ul>
+      <li>Safe driving bonus – £5 per day</li>
+    </ul>
+    <p>Our vans are fitted with a system similar to a black box for recording driving. This helps reduce van costs and also supports us with any issues on the road. To be eligible for the safe driving bonus, you must achieve a daily driving score of 90% or higher.</p>
+
+    <h2>Amazon Bonus</h2>
+    <p>Amazon bonuses are based on the number of parcels you deliver and your driver scorecard. This includes metrics such as taking delivery photos, contacting customers, and overall delivery quality. These are simple to achieve if the job is done correctly, and the majority of our drivers earn the bonus every week.</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/delivery.jpg" alt="Delivery" class="slide-img">
+    <h1>About the Job</h1>
+    <p>The day starts with receiving your route confirmation on the AFS app. Once confirmed and ready, you will complete a quick van check in the AFS app.</p>
+    <p>When you arrive at the depot, you will need to give the yard marshal your route number (shown in the app). Then wait in the holding area until it is your time to load.</p>
+    <p>Unlike other delivery jobs, loading at Amazon is a quick turnaround — usually around 15 minutes. Parcels are in bags and cages, making it efficient to load your van.</p>
+    <p>The Amazon delivery app is very simple to use. It navigates you from stop to stop and prompts you with all relevant details, such as customer notes, parcel type, bag location, and access codes.</p>
+    <p>Once finished, if you have any returns, you will either hand them to our Debrief Driver (who returns them to the depot) or return them yourself.</p>
+  </div>
+
+  <div class="slide">
+    <img src="images/arrow.jpg" alt="Next Steps" class="slide-img">
+    <h1>Next Steps</h1>
+    <p>If you meet the requirements and are happy to join our team, we will begin the onboarding process. The next steps are:</p>
+    <ul>
+      <li>Once driving license verification is complete, you can start the background check</li>
+      <li>Your background check usually takes 24 hours to complete</li>
+      <li>After completion, you will be booked onto an online training session (a full day, paid)</li>
+      <li>Following training, you will complete 2 ride-alongs (days on the road with experienced drivers)</li>
+      <li>After these steps, you are ready to go on your own!</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <img src="images/question.jpg" alt="Questions" class="slide-img">
+    <h1>If you have any questions, please feel free to ask!</h1>
+  </div>
+
+  <div class="slide">
+    <h1>Sign-Up Form</h1>
+    <p>Please complete the form below:</p>
+
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdhMTCtM-Tra1CiuVkpzUhJsGRWiA6sJnd3JTJ5xuDjDGULSg/viewform?embedded=true" 
+      width="100%" height="800" 
+      frameborder="0" marginheight="0" marginwidth="0">
+      Loading…
+    </iframe>
+  </div>
+
+  <div class="nav-arrows">
+    <button class="arrow left" onclick="prevSlide()">⬅</button>
+    <button class="arrow right" onclick="nextSlide()">➡</button>
+  </div>
+
+  <div class="nav">
+    <button onclick="prevSlide()">⬅ Back</button>
+    <span id="progress"></span>
+    <button onclick="nextSlide()">Next ➡</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
