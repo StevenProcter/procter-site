@@ -1,10 +1,8 @@
 {
   "routes": [
     { "src": "^/$", "dest": "/recruitment/index.html" },
-
     { "src": "^/recruitment$", "dest": "/recruitment/index.html" },
     { "src": "^/recruitment/$", "dest": "/recruitment/index.html" },
-
     { "src": "^/metrics$", "dest": "/metrics/index.html" },
     { "src": "^/metrics/$", "dest": "/metrics/index.html" }
   ]
